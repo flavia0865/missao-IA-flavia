@@ -103,6 +103,12 @@ function mostraPergunta() {
 }
 
 function mostraAlternativas() {
+     if(atual>= perguntas.lenght){
+        mostraResultado();
+        return;
+     }
+
+
     for (const alternativa of perguntaAtual.alternativas) {
         const botaoAlternativas = document.createElement("button");
         botaoAlternativas.textContent = alternativa.texto;
@@ -123,7 +129,7 @@ function mostraResultado(){
     caixaPerguntas.textContent = "Se fosse possível...";
     textoResultado.textContent = histotiaFinal;
     caixaAlternativas.textContent = " ";
-    
+
 }
 
 
