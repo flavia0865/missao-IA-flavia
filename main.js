@@ -112,6 +112,21 @@ function mostraAlternativas() {
     }
 }
 
+function respostaSelecionada(opcaoSelecionada){
+    const afirmacoes = opcaoSelecionada.afirmaca;
+    histotiaFinal += afirmacoes + " ";
+    atual++;
+    mostraPergunta();
+}
+
+function mostraResultado(){
+    caixaPerguntas.textContent = "Se fosse possível...";
+    textoResultado.textContent = histotiaFinal;
+    caixaAlternativas.textContent = " ";
+    
+}
+
+
 
 
 
